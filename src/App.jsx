@@ -1,6 +1,30 @@
-const App=()=>{
-    return <div>
-        <h1 className="text-3xl text-sky-700 font-poppins">App Component</h1>
+import style from "./style.js";
+import {Billing,Business,CardDeal, Clients,
+    CTA,Footer, Hero, NavBar, Stats, Testimonials} from "./components"
+const App=()=>(
+    <div className="bg-primary w-full overflow-hidden ">
+        <div className={`${style.paddingX} ${style.flexCenter}`}>
+            <div className={`${style.boxWidth}`}>
+                <NavBar/>
+            </div>
+        </div>
+        <div className={`bg-primary ${style.flexStart}`}>
+            <div className={`${style.boxWidth}`}>
+                <Hero/>
+            </div>
+        </div>
+        <div className={`bg-primary ${style.paddingX} ${style.flexStart}`}>
+            <div className={`${style.boxWidth}`}>
+                <Stats/>
+                <Business/>
+                <Billing/>
+                <CardDeal/>
+                <Testimonials/>
+                <Clients/>
+                <CTA/>
+                <Footer/>
+            </div>
     </div>
-}
+</div>
+)
 export default App;
