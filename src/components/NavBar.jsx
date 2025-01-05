@@ -1,20 +1,22 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {close, logo, menu} from "../assets/index.js";
 import {navLinks} from "../constants/index.js";
 export const NavBar = () => {
     const [toggle,setToggle]=useState(false);
     return (
-        <nav className="w-full flex py-6 justify-between items-center navbar">
+        <nav className="w-full flex py-6 justify-between items-center navbar ">
              <img src={logo} alt="hoobank" className="w-[124px] h-[32px]"/>
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                 {navLinks.map((link, index) =>(
-                    <li key={index} className={`font-poppins
+                        <li key={index} className={`font-poppins group transition-all duration-150
                      font-normal cursor-pointer text-[16px] text-white 
-                     ${index===navLinks.length-1 ? "mr-0" : "mr-10"}
+                     ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}
                      `}>
-                        <a href={`#${link.id}`}>{link.title}</a>
-                    </li>
-                )
+                            <a href={`#${link.id}`} className="py-1">{link.title}</a>
+                            <hr className='border-none outline-none h-0.5 bg-blue-gradient w-full m-auto hidden group-hover:block
+                           '/>
+                        </li>
+                    )
                 )}
             </ul>
             {/*mobile NavBar */}
