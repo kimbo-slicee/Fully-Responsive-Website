@@ -1,6 +1,7 @@
 import style from "./style.js";
 import {Billing,Business,CardDeal, Clients,
     CTA,Footer, Hero, NavBar, Stats, Testimonials} from "./components"
+import styles from "./style.js";
 const App=()=>(
     <div className="bg-primary w-full overflow-hidden ">
         <div className={`${style.paddingX} ${style.flexCenter}`}>
@@ -8,8 +9,8 @@ const App=()=>(
                 <NavBar/>
             </div>
         </div>
-        <div className={`bg-primary ${style.flexStart}`}>
-            <div className={`${style.boxWidth}`}>
+        <div className={`bg-primary ${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
                 <Hero/>
             </div>
         </div>
@@ -24,7 +25,7 @@ const App=()=>(
                 <CTA/>
                 <Footer/>
             </div>
+        </div>
     </div>
-</div>
 )
 export default App;
