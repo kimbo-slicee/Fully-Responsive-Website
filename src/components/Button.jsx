@@ -1,6 +1,5 @@
-// eslint-disable-next-line react/prop-types
 export const Button = ({styles}) => (
-    <button className={`py-4 px-6 bg-blue-gradient relative font-poppins font-medium rounded-l group/button inline-flex items-center justify-center overflow-hidden text-primary transition-all duration-300 ease-in-out hover:scale-110 
+    <button className={`py-4 px-6 bg-blue-gradient relative font-poppins font-medium rounded-xl group/button inline-flex items-center justify-center overflow-hidden text-primary transition-all duration-300 ease-in-out hover:scale-110 
           hover:shadow-[0_0px_20px_rgba(0,246,255,0.5)] border-none ${styles}`}
     >
         <span className="text-[18px]">Get Stared</span>
