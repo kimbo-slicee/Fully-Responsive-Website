@@ -1,8 +1,9 @@
 import {quotes} from "../assets/index.js";
-
+import {motion} from "framer-motion";
 export const FeedbackCard = ({name,title,content,img}) => {
     return (
-        <div className="flex justify-between flex-col
+        <motion.div
+            className="flex justify-between flex-col
          px-10 py-10 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-0
           feedback-card hover:scale-110 transition-all duration-500 cursor-pointer shadow shadow-blue-500/40 hover:shadow-indigo-500/40">
             <img src={quotes} alt="double_quotes" className="w-[42px] h-[27px] object-contain"/>
@@ -18,6 +19,6 @@ export const FeedbackCard = ({name,title,content,img}) => {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
